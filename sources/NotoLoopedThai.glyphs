@@ -337,6 +337,10 @@ Tag = VLHT;
 {
 name = "Disable Last Change";
 value = 1;
+},
+{
+name = "Use Line Breaks";
+value = 1;
 }
 );
 date = "2020-12-18 18:02:45 +0000";
@@ -347,46 +351,260 @@ familyName = "Noto Looped Thai";
 featurePrefixes = (
 {
 automatic = 1;
-code = "languagesystem DFLT dflt;\012\012languagesystem thai dflt;\012languagesystem thai PAL;\012languagesystem thai SAN;\012";
+code = "languagesystem DFLT dflt;
+
+languagesystem thai dflt;
+languagesystem thai PAL;
+languagesystem thai SAN;
+";
 name = Languagesystems;
 },
 {
-code = "table STAT {\012    ElidedFallbackName { name \"Regular\"; };\012\012    DesignAxis wght 0 { name \"Weight\"; };\012    DesignAxis wdth 1 { name \"Width\"; };\012    DesignAxis VLHT 2 { name \"Vertical height\"; };\012\012    AxisValue {\012        location wght 100;\012        name \"Thin\";\012    };\012    AxisValue {\012        location wght 200;\012        name \"ExtraLight\";\012    };\012    AxisValue {\012        location wght 300;\012        name \"Light\";\012    };\012    AxisValue {\012        location wght 376;\012        name \"Regular\";\012        flag ElidableAxisValueName;\012    };\012    AxisValue {\012        location wght 500;\012        name \"Medium\";\012    };\012    AxisValue {\012        location wght 600;\012        name \"SemiBold\";\012    };\012    AxisValue {\012        location wght 700;\012        name \"Bold\";\012    };\012    AxisValue {\012        location wght 800;\012        name \"ExtraBold\";\012    };\012    AxisValue {\012        location wght 900;\012        name \"Black\";\012    };\012\012    AxisValue {\012        location wdth 62.5;\012        name \"Condensed\";\012    };\012    AxisValue {\012        location wdth 75;\012        name \"Condensed\";\012    };\012    AxisValue {\012        location wdth 87.5;\012        name \"SemiCondensed\";\012    };\012    AxisValue {\012        location wdth 100;\012        name \"Normal\";\012        flag ElidableAxisValueName;\012    };\012\012    AxisValue {\012        location VLHT 0;\012        name \"Normal\";\012        flag ElidableAxisValueName;\012    };\012    AxisValue {\012        location VLHT 1362;\012        name \"UI\";\012    };\012} STAT;";
+code = "table STAT {
+    ElidedFallbackName { name \"Regular\"; };
+
+    DesignAxis wght 0 { name \"Weight\"; };
+    DesignAxis wdth 1 { name \"Width\"; };
+    DesignAxis VLHT 2 { name \"Vertical height\"; };
+
+    AxisValue {
+        location wght 100;
+        name \"Thin\";
+    };
+    AxisValue {
+        location wght 200;
+        name \"ExtraLight\";
+    };
+    AxisValue {
+        location wght 300;
+        name \"Light\";
+    };
+    AxisValue {
+        location wght 376;
+        name \"Regular\";
+        flag ElidableAxisValueName;
+    };
+    AxisValue {
+        location wght 500;
+        name \"Medium\";
+    };
+    AxisValue {
+        location wght 600;
+        name \"SemiBold\";
+    };
+    AxisValue {
+        location wght 700;
+        name \"Bold\";
+    };
+    AxisValue {
+        location wght 800;
+        name \"ExtraBold\";
+    };
+    AxisValue {
+        location wght 900;
+        name \"Black\";
+    };
+
+    AxisValue {
+        location wdth 62.5;
+        name \"Condensed\";
+    };
+    AxisValue {
+        location wdth 75;
+        name \"Condensed\";
+    };
+    AxisValue {
+        location wdth 87.5;
+        name \"SemiCondensed\";
+    };
+    AxisValue {
+        location wdth 100;
+        name \"Normal\";
+        flag ElidableAxisValueName;
+    };
+
+    AxisValue {
+        location VLHT 0;
+        name \"Normal\";
+        flag ElidableAxisValueName;
+    };
+    AxisValue {
+        location VLHT 1362;
+        name \"UI\";
+    };
+} STAT;";
 name = STAT;
 }
 );
 features = (
 {
 automatic = 1;
-code = "feature calt;\012feature sups;\012";
+code = "feature calt;
+feature sups;
+";
 name = aalt;
 },
 {
-code = "lookup saraAmThai {\012	sub saraAm-thai by nikhahit-thai saraAa-thai;\012} saraAmThai;\012\012lookup ThaiBelowMarkLigatures {\012	sub saraU-thai phinthu-thai by phinthu_saraU-thai;\012	sub saraUu-thai phinthu-thai by phinthu_saraUu-thai;\012	} ThaiBelowMarkLigatures;\012\012lookup ThaiAboveMarkLigatures {\012	sub @ThaiAscendingConsonants maiHanaKat-thai' maitaikhu-thai' by maiHanaKat_maitaikhu-thai.narrow;\012	sub @ThaiAscendingConsonants maiHanaKat-thai' maiTri-thai' by maiHanaKat_maiTri-thai.narrow;\012	sub maiHanaKat-thai' maitaikhu-thai' by maiHanaKat_maitaikhu-thai;\012	sub maiHanaKat-thai' maiTri-thai' by maiHanaKat_maiTri-thai;\012	} ThaiAboveMarkLigatures;";
+code = "lookup saraAmThai {
+	sub saraAm-thai by nikhahit-thai saraAa-thai;
+} saraAmThai;
+
+lookup ThaiBelowMarkLigatures {
+	sub saraU-thai phinthu-thai by phinthu_saraU-thai;
+	sub saraUu-thai phinthu-thai by phinthu_saraUu-thai;
+	} ThaiBelowMarkLigatures;
+
+lookup ThaiAboveMarkLigatures {
+	sub @ThaiAscendingConsonants maiHanaKat-thai' maitaikhu-thai' by maiHanaKat_maitaikhu-thai.narrow;
+	sub @ThaiAscendingConsonants maiHanaKat-thai' maiTri-thai' by maiHanaKat_maiTri-thai.narrow;
+	sub maiHanaKat-thai' maitaikhu-thai' by maiHanaKat_maitaikhu-thai;
+	sub maiHanaKat-thai' maiTri-thai' by maiHanaKat_maiTri-thai;
+	} ThaiAboveMarkLigatures;";
 name = ccmp;
 },
 {
-code = "lookup ThaiLigatures {\012	lookupflag IgnoreMarks;\012	sub lu-thai lakkhangyao-thai by lu_lakkhangyao-thai;\012	sub ru-thai lakkhangyao-thai by ru_lakkhangyao-thai;\012} ThaiLigatures;";
+code = "lookup ThaiLigatures {
+	lookupflag IgnoreMarks;
+	sub lu-thai lakkhangyao-thai by lu_lakkhangyao-thai;
+	sub ru-thai lakkhangyao-thai by ru_lakkhangyao-thai;
+} ThaiLigatures;";
 name = rlig;
 },
 {
-code = "lookup ThaiDescenders {\012	sub @ThaiDescenders' @ThaiBelowMarks by @ThaiShortDescenders;\012	sub [doChada-thai.short toPatak-thai.short] @ThaiBelowMarks' by @ThaiSmallBelowMarks;\012	} ThaiDescenders;\012	\012lookup ThaiUpstairsMarks {\012	sub [@ThaiAboveMarks tildecomb] @ThaiToneMarks' by @ThaiSmallToneMarks;\012	} ThaiUpstairsMarks;\012	\012lookup ThailoChula {\012	lookupflag UseMarkFilteringSet @ThaiAboveMarks;\012	sub loChula-thai' [@ThaiAboveMarks tildecomb] by loChula-thai.short;\012	} ThailoChula;\012\012lookup ThaiMacronBelow {\012	lookupflag UseMarkFilteringSet @Macronbelow;\012	sub boBaimai-thai macronbelowcomb by boBaimai-thai_macronbelowcomb;\012	sub choChan-thai macronbelowcomb by choChan-thai_macronbelowcomb;\012	sub choChoe-thai macronbelowcomb by choChoe-thai_macronbelowcomb;\012	sub doDek-thai macronbelowcomb by doDek-thai_macronbelowcomb;\012	sub khoRakhang-thai macronbelowcomb by khoRakhang-thai_macronbelowcomb;\012	sub moMa-thai macronbelowcomb by moMa-thai_macronbelowcomb;\012	sub ngoNgu-thai macronbelowcomb by ngoNgu-thai_macronbelowcomb;\012	sub noNu-thai macronbelowcomb by noNu-thai_macronbelowcomb;\012	sub saraAa-thai macronbelowcomb by saraAa-thai_macronbelowcomb;\012	sub saraAe-thai macronbelowcomb by saraAe-thai_macronbelowcomb;\012	sub soSo-thai macronbelowcomb by soSo-thai_macronbelowcomb;\012	sub yoYak-thai macronbelowcomb by yoYak-thai_macronbelowcomb;\012	sub [yoYing-thai yoYing-thai.less] macronbelowcomb by yoYing-thai_macronbelowcomb;\012	} ThaiMacronBelow;\012\012lookup DoubleMacronWidth {\012	lookupflag 0;\012	sub [thoPhuthao-thai noNen-thai] macronbelowcomb' by macronbelowcomb.alt;\012	sub doublemacroncomb' [yoYing-thai yoYing-thai.less] by doublemacroncomb.wide;\012	} DoubleMacronWidth;\012	\012lookup ThaiNarrowMarks {\012	lookupflag UseMarkFilteringSet @ThaiAboveMarks;\012	sub @ThaiAscendingVowels [poPla-thai foFa-thai] [maiTho-thai maiTri-thai]' by [maiTho-thai.extranarrow maiTri-thai.extranarrow];\012	sub @ThaiAscendingConsonants @ThaiNonNarrowMarks' by @ThaiNarrowMarks;\012	} ThaiNarrowMarks;\012\012lookupflag 0;\012	\012script thai;\012language PAL ;\012	lookup ThaiDescenders;\012	lookup ThaiUpstairsMarks;\012	lookup ThailoChula;\012	lookup ThaiMacronBelow;\012	lookup DoubleMacronWidth;\012	lookup ThaiNarrowMarks;\012	\012	### Use .less versions of yoYing and thoThan as defaults;\012	sub [yoYing-thai thoThan-thai] by [yoYing-thai.less thoThan-thai.less];\012	\012script thai;\012language SAN ;\012	lookup ThaiDescenders;\012	lookup ThaiUpstairsMarks;\012	lookup ThailoChula;\012	lookup ThaiMacronBelow;\012	lookup DoubleMacronWidth;\012	lookup ThaiNarrowMarks;\012	\012	### Use .less versions of yoYing and thoThan as defaults;\012	sub [yoYing-thai thoThan-thai] by [yoYing-thai.less thoThan-thai.less];";
+code = "lookup ThaiDescenders {
+	sub @ThaiDescenders' @ThaiBelowMarks by @ThaiShortDescenders;
+	sub [doChada-thai.short toPatak-thai.short] @ThaiBelowMarks' by @ThaiSmallBelowMarks;
+	} ThaiDescenders;
+	
+lookup ThaiUpstairsMarks {
+	sub [@ThaiAboveMarks tildecomb] @ThaiToneMarks' by @ThaiSmallToneMarks;
+	} ThaiUpstairsMarks;
+	
+lookup ThailoChula {
+	lookupflag UseMarkFilteringSet @ThaiAboveMarks;
+	sub loChula-thai' [@ThaiAboveMarks tildecomb] by loChula-thai.short;
+	} ThailoChula;
+
+lookup ThaiMacronBelow {
+	lookupflag UseMarkFilteringSet @Macronbelow;
+	sub boBaimai-thai macronbelowcomb by boBaimai-thai_macronbelowcomb;
+	sub choChan-thai macronbelowcomb by choChan-thai_macronbelowcomb;
+	sub choChoe-thai macronbelowcomb by choChoe-thai_macronbelowcomb;
+	sub doDek-thai macronbelowcomb by doDek-thai_macronbelowcomb;
+	sub khoRakhang-thai macronbelowcomb by khoRakhang-thai_macronbelowcomb;
+	sub moMa-thai macronbelowcomb by moMa-thai_macronbelowcomb;
+	sub ngoNgu-thai macronbelowcomb by ngoNgu-thai_macronbelowcomb;
+	sub noNu-thai macronbelowcomb by noNu-thai_macronbelowcomb;
+	sub saraAa-thai macronbelowcomb by saraAa-thai_macronbelowcomb;
+	sub saraAe-thai macronbelowcomb by saraAe-thai_macronbelowcomb;
+	sub soSo-thai macronbelowcomb by soSo-thai_macronbelowcomb;
+	sub yoYak-thai macronbelowcomb by yoYak-thai_macronbelowcomb;
+	sub [yoYing-thai yoYing-thai.less] macronbelowcomb by yoYing-thai_macronbelowcomb;
+	} ThaiMacronBelow;
+
+lookup DoubleMacronWidth {
+	lookupflag 0;
+	sub [thoPhuthao-thai noNen-thai] macronbelowcomb' by macronbelowcomb.alt;
+	sub doublemacroncomb' [yoYing-thai yoYing-thai.less] by doublemacroncomb.wide;
+	} DoubleMacronWidth;
+	
+lookup ThaiNarrowMarks {
+	lookupflag UseMarkFilteringSet @ThaiAboveMarks;
+	sub @ThaiAscendingVowels [poPla-thai foFa-thai] [maiTho-thai maiTri-thai]' by [maiTho-thai.extranarrow maiTri-thai.extranarrow];
+	sub @ThaiAscendingConsonants @ThaiNonNarrowMarks' by @ThaiNarrowMarks;
+	} ThaiNarrowMarks;
+
+lookupflag 0;
+	
+script thai;
+language PAL ;
+	lookup ThaiDescenders;
+	lookup ThaiUpstairsMarks;
+	lookup ThailoChula;
+	lookup ThaiMacronBelow;
+	lookup DoubleMacronWidth;
+	lookup ThaiNarrowMarks;
+	
+	### Use .less versions of yoYing and thoThan as defaults;
+	sub [yoYing-thai thoThan-thai] by [yoYing-thai.less thoThan-thai.less];
+	
+script thai;
+language SAN ;
+	lookup ThaiDescenders;
+	lookup ThaiUpstairsMarks;
+	lookup ThailoChula;
+	lookup ThaiMacronBelow;
+	lookup DoubleMacronWidth;
+	lookup ThaiNarrowMarks;
+	
+	### Use .less versions of yoYing and thoThan as defaults;
+	sub [yoYing-thai thoThan-thai] by [yoYing-thai.less thoThan-thai.less];";
 name = calt;
 },
 {
-code = "lookup ThaiSuperscriptNumbers {\012sub zero-thai by zero-thai.sups;\012sub one-thai by one-thai.sups;\012sub two-thai by two-thai.sups;\012sub three-thai by three-thai.sups;\012sub four-thai by four-thai.sups;\012sub five-thai by five-thai.sups;\012sub six-thai by six-thai.sups;\012sub seven-thai by seven-thai.sups;\012sub eight-thai by eight-thai.sups;\012sub nine-thai by nine-thai.sups;\012} ThaiSuperscriptNumbers;";
+code = "lookup ThaiSuperscriptNumbers {
+sub zero-thai by zero-thai.sups;
+sub one-thai by one-thai.sups;
+sub two-thai by two-thai.sups;
+sub three-thai by three-thai.sups;
+sub four-thai by four-thai.sups;
+sub five-thai by five-thai.sups;
+sub six-thai by six-thai.sups;
+sub seven-thai by seven-thai.sups;
+sub eight-thai by eight-thai.sups;
+sub nine-thai by nine-thai.sups;
+} ThaiSuperscriptNumbers;";
 name = sups;
 },
 {
-code = "# Automatic Code End\012";
+code = "# Automatic Code End
+";
 name = mark;
 },
 {
-code = "# Automatic Code End\012\012lookup combinewithdoublemacron { ### These distances are optimised for the regular weight; Glyphs currently won't let us replace the values in different instances, but we will put in different values in each instance when this becomes possible in the replaceFeature custom parameter###\012	### move doubleMacron up if preceded by Thai marks above\012	pos @ThaiAboveMarks [doublemacroncomb doublemacroncomb.wide]' <0 250 0 0>;\012	### move Thai marks up if preceded by double macron\012	pos [doublemacroncomb doublemacroncomb.wide] @ThaiAboveMarks' <0 175 0 0>;\012	### move Thai marks up when double macron precedes the base\012	pos [doublemacroncomb doublemacroncomb.wide] @ThaiBases @ThaiAboveMarks' <0 175 0 0>;\012	pos [doublemacroncomb doublemacroncomb.wide] @ThaiBases @ThaiBelowMarks @ThaiAboveMarks' <0 175 0 0>;\012	} combinewithdoublemacron ;\012	\012lookup ContextualMarkPositions { ### Tonemarks are shifted slightly left when followed by ascending vowel signs;\012	lookupflag UseMarkFilteringSet @ThaiAboveMarks;\012	pos maiEk-thai' @ThaiAscendingVowels <-30 0 0 0>;\012	pos maiTho-thai' @ThaiAscendingVowels <-60 0 0 0>;\012	pos maiTri-thai' @ThaiAscendingVowels <-80 0 0 0>;\012	pos thanthakhat-thai' @ThaiAscendingVowels <-60 0 0 0>;\012		\012	### This is an alternative solution, but we prefer the above;\012	### pos maiTri-thai @ThaiAscendingVowels' <60 0 60 0>;\012	\012	} ContextualMarkPositions;\012	\012lookup workaroundShapingError {\012# for combinations that don't have precomposed glyphs, shaping engines normalise macronbelow at the end of the sequence, when they should be between bases and marks below. Here we manually move marks further down so they appear below macronbelow.\012	lookupflag UseMarkFilteringSet @ThaiBelowMarks;\012	pos @ThaiBelowMarks' macronbelowcomb <0 -200 0 0>; ### for Firefox and Chrome;\012	pos macronbelowcomb @ThaiBelowMarks' <0 -200 0 0>; ### for Safari;\012	} workaroundShapingError;\012	\012lookup ShiftSaraUe { ### SaraUe appears too far left on certain consonants, here we make adjustments;\012	pos @SpecialConsonants saraUe-thai' <15 0 0 0>;\012	pos [thoThong-thai roRua-thai] saraUe-thai' <30 0 0 0>;\012	} ShiftSaraUe;";
+code = "# Automatic Code End
+
+lookup combinewithdoublemacron { ### These distances are optimised for the regular weight; Glyphs currently won't let us replace the values in different instances, but we will put in different values in each instance when this becomes possible in the replaceFeature custom parameter###
+	### move doubleMacron up if preceded by Thai marks above
+	pos @ThaiAboveMarks [doublemacroncomb doublemacroncomb.wide]' <0 250 0 0>;
+	### move Thai marks up if preceded by double macron
+	pos [doublemacroncomb doublemacroncomb.wide] @ThaiAboveMarks' <0 175 0 0>;
+	### move Thai marks up when double macron precedes the base
+	pos [doublemacroncomb doublemacroncomb.wide] @ThaiBases @ThaiAboveMarks' <0 175 0 0>;
+	pos [doublemacroncomb doublemacroncomb.wide] @ThaiBases @ThaiBelowMarks @ThaiAboveMarks' <0 175 0 0>;
+	} combinewithdoublemacron ;
+	
+lookup ContextualMarkPositions { ### Tonemarks are shifted slightly left when followed by ascending vowel signs;
+	lookupflag UseMarkFilteringSet @ThaiAboveMarks;
+	pos maiEk-thai' @ThaiAscendingVowels <-30 0 0 0>;
+	pos maiTho-thai' @ThaiAscendingVowels <-60 0 0 0>;
+	pos maiTri-thai' @ThaiAscendingVowels <-80 0 0 0>;
+	pos thanthakhat-thai' @ThaiAscendingVowels <-60 0 0 0>;
+		
+	### This is an alternative solution, but we prefer the above;
+	### pos maiTri-thai @ThaiAscendingVowels' <60 0 60 0>;
+	
+	} ContextualMarkPositions;
+	
+lookup workaroundShapingError {
+# for combinations that don't have precomposed glyphs, shaping engines normalise macronbelow at the end of the sequence, when they should be between bases and marks below. Here we manually move marks further down so they appear below macronbelow.
+	lookupflag UseMarkFilteringSet @ThaiBelowMarks;
+	pos @ThaiBelowMarks' macronbelowcomb <0 -200 0 0>; ### for Firefox and Chrome;
+	pos macronbelowcomb @ThaiBelowMarks' <0 -200 0 0>; ### for Safari;
+	} workaroundShapingError;
+	
+lookup ShiftSaraUe { ### SaraUe appears too far left on certain consonants, here we make adjustments;
+	pos @SpecialConsonants saraUe-thai' <15 0 0 0>;
+	pos [thoThong-thai roRua-thai] saraUe-thai' <30 0 0 0>;
+	} ShiftSaraUe;";
 name = mkmk;
 },
 {
-code = "lookup ThaiContexualKerning { ### On ascending bases with tall prebase vowel signs, maiTho and maiTri need extranarrow versions to avoid unsightly collisions; \012	lookupflag UseMarkFilteringSet @ThaiAboveMarks;\012	pos @ThaiAscendingVowels foFa-thai' [maiTho-thai.extranarrow maiTri-thai.extranarrow] <15 0 15 0>;\012	pos @ThaiAscendingVowels poPla-thai' [maiTho-thai.extranarrow maiTri-thai.extranarrow maiChattawa-thai] <15 0 15 0>;\012	} ThaiContexualKerning;";
+code = "lookup ThaiContexualKerning { ### On ascending bases with tall prebase vowel signs, maiTho and maiTri need extranarrow versions to avoid unsightly collisions; 
+	lookupflag UseMarkFilteringSet @ThaiAboveMarks;
+	pos @ThaiAscendingVowels foFa-thai' [maiTho-thai.extranarrow maiTri-thai.extranarrow] <15 0 15 0>;
+	pos @ThaiAscendingVowels poPla-thai' [maiTho-thai.extranarrow maiTri-thai.extranarrow maiChattawa-thai] <15 0 15 0>;
+	} ThaiContexualKerning;";
 name = kern;
 }
 );

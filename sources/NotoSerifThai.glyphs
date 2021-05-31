@@ -55,6 +55,14 @@ value = (
 {
 name = license;
 value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.";
+},
+{
+name = "Disable Last Change";
+value = 1;
+},
+{
+name = "Use Line Breaks";
+value = 1;
 }
 );
 date = "2016-06-24 13:18:50 +0000";
@@ -65,27 +73,121 @@ familyName = "Noto Serif Thai";
 featurePrefixes = (
 {
 automatic = 1;
-code = "languagesystem DFLT dflt;\012languagesystem thai dflt;\012";
+code = "languagesystem DFLT dflt;
+languagesystem thai dflt;
+";
 name = Languagesystems;
 },
 {
-code = "table STAT {\012    ElidedFallbackName { name \"Regular\"; };\012\012    DesignAxis wght 0 { name \"Weight\"; };\012    DesignAxis wdth 1 { name \"Width\"; };\012\012    AxisValue {\012        location wght 100;\012        name \"Thin\";\012    };\012    AxisValue {\012        location wght 200;\012        name \"ExtraLight\";\012    };\012    AxisValue {\012        location wght 300;\012        name \"Light\";\012    };\012    AxisValue {\012        location wght 400;\012        name \"Regular\";\012        flag ElidableAxisValueName;\012    };\012    AxisValue {\012        location wght 500;\012        name \"Medium\";\012    };\012    AxisValue {\012        location wght 600;\012        name \"SemiBold\";\012    };\012    AxisValue {\012        location wght 700;\012        name \"Bold\";\012    };\012    AxisValue {\012        location wght 800;\012        name \"ExtraBold\";\012    };\012    AxisValue {\012        location wght 900;\012        name \"Black\";\012    };\012\012    AxisValue {\012        location wdth 62.5;\012        name \"Condensed\";\012    };\012    AxisValue {\012        location wdth 75;\012        name \"Condensed\";\012    };\012    AxisValue {\012        location wdth 87.5;\012        name \"SemiCondensed\";\012    };\012    AxisValue {\012        location wdth 100;\012        name \"Normal\";\012        flag ElidableAxisValueName;\012    };\012} STAT;";
+code = "table STAT {
+    ElidedFallbackName { name \"Regular\"; };
+
+    DesignAxis wght 0 { name \"Weight\"; };
+    DesignAxis wdth 1 { name \"Width\"; };
+
+    AxisValue {
+        location wght 100;
+        name \"Thin\";
+    };
+    AxisValue {
+        location wght 200;
+        name \"ExtraLight\";
+    };
+    AxisValue {
+        location wght 300;
+        name \"Light\";
+    };
+    AxisValue {
+        location wght 400;
+        name \"Regular\";
+        flag ElidableAxisValueName;
+    };
+    AxisValue {
+        location wght 500;
+        name \"Medium\";
+    };
+    AxisValue {
+        location wght 600;
+        name \"SemiBold\";
+    };
+    AxisValue {
+        location wght 700;
+        name \"Bold\";
+    };
+    AxisValue {
+        location wght 800;
+        name \"ExtraBold\";
+    };
+    AxisValue {
+        location wght 900;
+        name \"Black\";
+    };
+
+    AxisValue {
+        location wdth 62.5;
+        name \"Condensed\";
+    };
+    AxisValue {
+        location wdth 75;
+        name \"Condensed\";
+    };
+    AxisValue {
+        location wdth 87.5;
+        name \"SemiCondensed\";
+    };
+    AxisValue {
+        location wdth 100;
+        name \"Normal\";
+        flag ElidableAxisValueName;
+    };
+} STAT;";
 name = STAT;
 }
 );
 features = (
 {
 automatic = 1;
-code = "feature ccmp;\012";
+code = "feature ccmp;
+";
 name = aalt;
 },
 {
-code = "lookup thai_decomb {\012	script thai;\012	sub saraAm-thai by nikhahit-thai saraAa-thai;\012} thai_decomb;\012\012lookup thai_comb {\012    script thai;\012sub maiEk-thai nikhahit-thai by nikhahit_maiEk-thai;\012sub maiTho-thai nikhahit-thai by nikhahit_maiTho-thai;\012sub maiTri-thai nikhahit-thai by nikhahit_maiTri-thai;\012sub maiChattawa-thai nikhahit-thai by nikhahit_maiChattawa-thai;\012\012\012} thai_comb;\012\012lookup thai_comb1 {\012	script thai;\012sub [yoYing-thai thoThan-thai doChada-thai toPatak-thai ru-thai lu-thai]' [saraU-thai saraUu-thai phinthu-thai] by [yoYing-thai.less thoThan-thai.less doChada-thai.short toPatak-thai.short ru-thai.short lu-thai.short];\012sub [doChada-thai.short toPatak-thai.short ru-thai.short lu-thai.short] [phinthu-thai saraU-thai saraUu-thai]' by [phinthu-thai.small saraU-thai.small saraUu-thai.small];\012sub [nikhahit-thai nikhahit-thai.narrow maiHanaKat-thai maitaikhu-thai maiEk-thai maiTho-thai maiTri-thai maiChattawa-thai thanthakhat-thai yamakkan-thai saraI-thai saraIi-thai saraUe-thai saraUee-thai maiHanaKat-thai.narrow maitaikhu-thai.narrow saraI-thai.narrow saraIi-thai.narrow saraUe-thai.narrow saraUee-thai.narrow] [maiEk-thai maiTho-thai maiTri-thai maiChattawa-thai thanthakhat-thai]' by [maiEk-thai.small maiTho-thai.small maiTri-thai.small maiChattawa-thai.small thanthakhat-thai.small];\012sub loChula-thai' [nikhahit-thai maiChattawa-thai maiEk-thai maiHanaKat-thai thanthakhat-thai maiTho-thai maiTri-thai maitaikhu-thai yamakkan-thai saraI-thai saraIi-thai saraUe-thai saraUee-thai] by loChula-thai.short;\012sub [poPla-thai foFa-thai foFan-thai] [maiHanaKat-thai thanthakhat-thai nikhahit-thai maiEk-thai maiTho-thai maiTri-thai maiChattawa-thai maitaikhu-thai saraI-thai saraIi-thai saraUe-thai saraUee-thai]' by [maiHanaKat-thai.narrow thanthakhat-thai.narrow nikhahit-thai.narrow maiEk-thai.narrow maiTho-thai.narrow maiTri-thai.narrow maiChattawa-thai.narrow maitaikhu-thai.narrow saraI-thai.narrow saraIi-thai.narrow saraUe-thai.narrow saraUee-thai.narrow];\012sub [poPla-thai foFa-thai foFan-thai] [nikhahit_maiEk-thai nikhahit_maiTho-thai nikhahit_maiTri-thai nikhahit_maiChattawa-thai]' by [nikhahit_maiEk-thai.narrow nikhahit_maiTho-thai.narrow nikhahit_maiTri-thai.narrow nikhahit_maiChattawa-thai.narrow];\012sub [maiEk-thai.narrow maiTho-thai.narrow maiTri-thai.narrow maiChattawa-thai.narrow thanthakhat-thai.narrow] [maiEk-thai maiTho-thai maiTri-thai maiChattawa-thai thanthakhat-thai]' by [maiEk-thai.small maiTho-thai.small maiTri-thai.small maiChattawa-thai.small thanthakhat-thai.small];\012sub [poPla-thai foFa-thai foFan-thai] [saraU-thai saraUu-thai phinthu-thai] [maiEk-thai maiTho-thai maiTri-thai maiChattawa-thai thanthakhat-thai]' by [maiEk-thai.narrow maiTho-thai.narrow maiTri-thai.narrow maiChattawa-thai.narrow thanthakhat-thai.narrow];\012sub [maiHanaKat-thai.narrow maitaikhu-thai.narrow saraI-thai.narrow saraIi-thai.narrow saraUe-thai.narrow saraUee-thai.narrow] [maiHanaKat-thai maitaikhu-thai saraI-thai saraIi-thai saraUe-thai saraUee-thai]' by [maiHanaKat-thai.narrow maitaikhu-thai.narrow saraI-thai.narrow saraIi-thai.narrow saraUe-thai.narrow saraUee-thai.narrow];\012sub [choChoe-thai thoPhuthao-thai noNen-thai] macronbelowcomb' by macronbelowcomb.alt;\012\012} thai_comb1;";
+code = "lookup thai_decomb {
+	script thai;
+	sub saraAm-thai by nikhahit-thai saraAa-thai;
+} thai_decomb;
+
+lookup thai_comb {
+    script thai;
+sub maiEk-thai nikhahit-thai by nikhahit_maiEk-thai;
+sub maiTho-thai nikhahit-thai by nikhahit_maiTho-thai;
+sub maiTri-thai nikhahit-thai by nikhahit_maiTri-thai;
+sub maiChattawa-thai nikhahit-thai by nikhahit_maiChattawa-thai;
+
+
+} thai_comb;
+
+lookup thai_comb1 {
+	script thai;
+sub [yoYing-thai thoThan-thai doChada-thai toPatak-thai ru-thai lu-thai]' [saraU-thai saraUu-thai phinthu-thai] by [yoYing-thai.less thoThan-thai.less doChada-thai.short toPatak-thai.short ru-thai.short lu-thai.short];
+sub [doChada-thai.short toPatak-thai.short ru-thai.short lu-thai.short] [phinthu-thai saraU-thai saraUu-thai]' by [phinthu-thai.small saraU-thai.small saraUu-thai.small];
+sub [nikhahit-thai nikhahit-thai.narrow maiHanaKat-thai maitaikhu-thai maiEk-thai maiTho-thai maiTri-thai maiChattawa-thai thanthakhat-thai yamakkan-thai saraI-thai saraIi-thai saraUe-thai saraUee-thai maiHanaKat-thai.narrow maitaikhu-thai.narrow saraI-thai.narrow saraIi-thai.narrow saraUe-thai.narrow saraUee-thai.narrow] [maiEk-thai maiTho-thai maiTri-thai maiChattawa-thai thanthakhat-thai]' by [maiEk-thai.small maiTho-thai.small maiTri-thai.small maiChattawa-thai.small thanthakhat-thai.small];
+sub loChula-thai' [nikhahit-thai maiChattawa-thai maiEk-thai maiHanaKat-thai thanthakhat-thai maiTho-thai maiTri-thai maitaikhu-thai yamakkan-thai saraI-thai saraIi-thai saraUe-thai saraUee-thai] by loChula-thai.short;
+sub [poPla-thai foFa-thai foFan-thai] [maiHanaKat-thai thanthakhat-thai nikhahit-thai maiEk-thai maiTho-thai maiTri-thai maiChattawa-thai maitaikhu-thai saraI-thai saraIi-thai saraUe-thai saraUee-thai]' by [maiHanaKat-thai.narrow thanthakhat-thai.narrow nikhahit-thai.narrow maiEk-thai.narrow maiTho-thai.narrow maiTri-thai.narrow maiChattawa-thai.narrow maitaikhu-thai.narrow saraI-thai.narrow saraIi-thai.narrow saraUe-thai.narrow saraUee-thai.narrow];
+sub [poPla-thai foFa-thai foFan-thai] [nikhahit_maiEk-thai nikhahit_maiTho-thai nikhahit_maiTri-thai nikhahit_maiChattawa-thai]' by [nikhahit_maiEk-thai.narrow nikhahit_maiTho-thai.narrow nikhahit_maiTri-thai.narrow nikhahit_maiChattawa-thai.narrow];
+sub [maiEk-thai.narrow maiTho-thai.narrow maiTri-thai.narrow maiChattawa-thai.narrow thanthakhat-thai.narrow] [maiEk-thai maiTho-thai maiTri-thai maiChattawa-thai thanthakhat-thai]' by [maiEk-thai.small maiTho-thai.small maiTri-thai.small maiChattawa-thai.small thanthakhat-thai.small];
+sub [poPla-thai foFa-thai foFan-thai] [saraU-thai saraUu-thai phinthu-thai] [maiEk-thai maiTho-thai maiTri-thai maiChattawa-thai thanthakhat-thai]' by [maiEk-thai.narrow maiTho-thai.narrow maiTri-thai.narrow maiChattawa-thai.narrow thanthakhat-thai.narrow];
+sub [maiHanaKat-thai.narrow maitaikhu-thai.narrow saraI-thai.narrow saraIi-thai.narrow saraUe-thai.narrow saraUee-thai.narrow] [maiHanaKat-thai maitaikhu-thai saraI-thai saraIi-thai saraUe-thai saraUee-thai]' by [maiHanaKat-thai.narrow maitaikhu-thai.narrow saraI-thai.narrow saraIi-thai.narrow saraUe-thai.narrow saraUee-thai.narrow];
+sub [choChoe-thai thoPhuthao-thai noNen-thai] macronbelowcomb' by macronbelowcomb.alt;
+
+} thai_comb1;";
 name = ccmp;
 },
 {
 automatic = 1;
-code = "sub lu-thai lakkhangyao-thai by lu_lakkhangyao-thai;\012sub ru-thai lakkhangyao-thai by ru_lakkhangyao-thai;\012";
+code = "sub lu-thai lakkhangyao-thai by lu_lakkhangyao-thai;
+sub ru-thai lakkhangyao-thai by ru_lakkhangyao-thai;
+";
 name = liga;
 }
 );
@@ -1317,7 +1419,6 @@ xHeight = 536;
 glyphs = (
 {
 glyphname = .notdef;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "22BDAFBE-6308-4010-9D0C-693FDF26AFAA";
@@ -1516,7 +1617,6 @@ subCategory = Other;
 },
 {
 glyphname = NULL;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "8AE4ADC8-9A9B-483B-9DC3-8C129A33EC0D";
@@ -1555,7 +1655,6 @@ unicode = 0000;
 },
 {
 glyphname = CR;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "22BDAFBE-6308-4010-9D0C-693FDF26AFAA";
@@ -1595,7 +1694,6 @@ subCategory = Other;
 },
 {
 glyphname = space;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -1634,7 +1732,6 @@ unicode = 0020;
 },
 {
 glyphname = "koKai-thai";
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 anchors = (
@@ -2106,7 +2203,6 @@ unicode = 0E01;
 },
 {
 glyphname = "thoThung-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -2809,7 +2905,6 @@ unicode = 0E16;
 },
 {
 glyphname = "phoSamphao-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -3512,7 +3607,6 @@ unicode = 0E20;
 },
 {
 glyphname = "ru-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -4215,7 +4309,6 @@ unicode = 0E24;
 },
 {
 glyphname = "ru-thai.short";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -4917,7 +5010,6 @@ width = 522;
 },
 {
 glyphname = "lu-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -5620,7 +5712,6 @@ unicode = 0E26;
 },
 {
 glyphname = "lu-thai.short";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -6322,7 +6413,6 @@ width = 547;
 },
 {
 glyphname = "doChada-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -7249,7 +7339,6 @@ unicode = 0E0E;
 },
 {
 glyphname = "doChada-thai.short";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -8175,7 +8264,6 @@ width = 544;
 },
 {
 glyphname = "toPatak-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -9134,7 +9222,6 @@ unicode = 0E0F;
 },
 {
 glyphname = "toPatak-thai.short";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -10092,7 +10179,6 @@ width = 546;
 },
 {
 glyphname = "ru_lakkhangyao-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -10842,7 +10928,6 @@ width = 830;
 },
 {
 glyphname = "lu_lakkhangyao-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -11592,7 +11677,6 @@ width = 858;
 },
 {
 glyphname = "yoYing-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -12799,7 +12883,6 @@ unicode = 0E0D;
 },
 {
 glyphname = "yoYing-thai.less";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -13626,7 +13709,6 @@ width = 729;
 },
 {
 glyphname = "khoKhai-thai";
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 anchors = (
@@ -14330,7 +14412,6 @@ unicode = 0E02;
 },
 {
 glyphname = "khoKhuat-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -15073,7 +15154,6 @@ unicode = 0E03;
 },
 {
 glyphname = "choChang-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -15896,7 +15976,6 @@ unicode = 0E0A;
 },
 {
 glyphname = "soSo-thai";
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 anchors = (
@@ -16760,7 +16839,6 @@ unicode = 0E0B;
 },
 {
 glyphname = "khoKhwai-thai";
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 anchors = (
@@ -17432,7 +17510,6 @@ unicode = 0E04;
 },
 {
 glyphname = "khoKhon-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -18143,7 +18220,6 @@ unicode = 0E05;
 },
 {
 glyphname = "soSala-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -18918,7 +18994,6 @@ unicode = 0E28;
 },
 {
 glyphname = "doDek-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -19589,7 +19664,6 @@ unicode = 0E14;
 },
 {
 glyphname = "toTao-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -20301,7 +20375,6 @@ unicode = 0E15;
 },
 {
 glyphname = "thoThahan-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -20940,7 +21013,6 @@ unicode = 0E17;
 },
 {
 glyphname = "thoNangmontho-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -21691,7 +21763,6 @@ unicode = 0E11;
 },
 {
 glyphname = "noNu-thai";
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 anchors = (
@@ -22419,7 +22490,6 @@ unicode = 0E19;
 },
 {
 glyphname = "moMa-thai";
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 anchors = (
@@ -23155,7 +23225,6 @@ unicode = 0E21;
 },
 {
 glyphname = "choChoe-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -24146,7 +24215,6 @@ unicode = 0E0C;
 },
 {
 glyphname = "noNen-thai";
-lastChange = "2020-01-23 22:54:20 +0000";
 layers = (
 {
 anchors = (
@@ -25129,7 +25197,6 @@ unicode = 0E13;
 },
 {
 glyphname = "thoPhuthao-thai";
-lastChange = "2020-01-23 22:18:20 +0000";
 layers = (
 {
 anchors = (
@@ -26128,7 +26195,6 @@ unicode = 0E12;
 },
 {
 glyphname = "khoRakhang-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -27047,7 +27113,6 @@ unicode = 0E06;
 },
 {
 glyphname = "thoThong-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -27622,7 +27687,6 @@ unicode = 0E18;
 },
 {
 glyphname = "roRua-thai";
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 anchors = (
@@ -28302,7 +28366,6 @@ unicode = 0E23;
 },
 {
 glyphname = "choChan-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -28965,7 +29028,6 @@ unicode = 0E08;
 },
 {
 glyphname = "woWaen-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -29529,7 +29591,6 @@ unicode = 0E27;
 },
 {
 glyphname = "ngoNgu-thai";
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 anchors = (
@@ -30145,7 +30206,6 @@ unicode = 0E07;
 },
 {
 glyphname = "thoThan-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -31488,7 +31548,6 @@ unicode = 0E10;
 },
 {
 glyphname = "thoThan-thai.less";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -32254,7 +32313,6 @@ width = 498;
 },
 {
 glyphname = "choChing-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -33085,7 +33143,6 @@ unicode = 0E09;
 },
 {
 glyphname = "loLing-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -33772,7 +33829,6 @@ unicode = 0E25;
 },
 {
 glyphname = "soSua-thai";
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 anchors = (
@@ -34564,7 +34620,6 @@ unicode = 0E2A;
 },
 {
 glyphname = "boBaimai-thai";
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 anchors = (
@@ -35317,7 +35372,6 @@ unicode = 0E1A;
 },
 {
 glyphname = "poPla-thai";
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 anchors = (
@@ -36070,7 +36124,6 @@ unicode = 0E1B;
 },
 {
 glyphname = "soRusi-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -37172,7 +37225,6 @@ unicode = 0E29;
 },
 {
 glyphname = "yoYak-thai";
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 anchors = (
@@ -37844,7 +37896,6 @@ unicode = 0E22;
 },
 {
 glyphname = "phoPhung-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -38379,7 +38430,6 @@ unicode = 0E1C;
 },
 {
 glyphname = "foFa-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -38914,7 +38964,6 @@ unicode = 0E1D;
 },
 {
 glyphname = "foFan-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -39457,7 +39506,6 @@ unicode = 0E1F;
 },
 {
 glyphname = "phoPhan-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -40001,7 +40049,6 @@ unicode = 0E1E;
 },
 {
 glyphname = "hoHip-thai";
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 anchors = (
@@ -40817,7 +40864,6 @@ unicode = 0E2B;
 },
 {
 glyphname = "loChula-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -41528,7 +41574,6 @@ unicode = 0E2C;
 },
 {
 glyphname = "loChula-thai.short";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -42262,7 +42307,6 @@ width = 595;
 },
 {
 glyphname = "oAng-thai";
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 anchors = (
@@ -42926,7 +42970,6 @@ unicode = 0E2D;
 },
 {
 glyphname = "hoNokhuk-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -43693,7 +43736,6 @@ unicode = 0E2E;
 },
 {
 glyphname = "saraAa-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -43941,7 +43983,6 @@ unicode = 0E32;
 },
 {
 glyphname = "saraAm-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -44460,7 +44501,6 @@ unicode = 0E33;
 },
 {
 glyphname = "lakkhangyao-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -44707,7 +44747,6 @@ unicode = 0E45;
 },
 {
 glyphname = "saraA-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -45578,7 +45617,6 @@ unicode = 0E30;
 },
 {
 glyphname = "saraE-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -45937,7 +45975,6 @@ unicode = 0E40;
 },
 {
 glyphname = "saraAe-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -46601,7 +46638,6 @@ subCategory = Other;
 },
 {
 glyphname = "saraAiMaimalai-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -47184,7 +47220,6 @@ unicode = 0E44;
 },
 {
 glyphname = "saraAiMaimuan-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -47911,7 +47946,6 @@ unicode = 0E43;
 },
 {
 glyphname = "saraO-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -48478,7 +48512,6 @@ unicode = 0E42;
 },
 {
 glyphname = uni25CC;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -50790,7 +50823,6 @@ subCategory = Lowercase;
 },
 {
 glyphname = "zero-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -51118,7 +51150,6 @@ unicode = 0E50;
 },
 {
 glyphname = "one-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -51630,7 +51661,6 @@ unicode = 0E51;
 },
 {
 glyphname = "two-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -52245,7 +52275,6 @@ unicode = 0E52;
 },
 {
 glyphname = "three-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -52853,7 +52882,6 @@ unicode = 0E53;
 },
 {
 glyphname = "four-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -53494,7 +53522,6 @@ unicode = 0E54;
 },
 {
 glyphname = "five-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -54407,7 +54434,6 @@ unicode = 0E55;
 },
 {
 glyphname = "six-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -54990,7 +55016,6 @@ unicode = 0E56;
 },
 {
 glyphname = "seven-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -55678,7 +55703,6 @@ unicode = 0E57;
 },
 {
 glyphname = "eight-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -56365,7 +56389,6 @@ unicode = 0E58;
 },
 {
 glyphname = "nine-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -57044,7 +57067,6 @@ unicode = 0E59;
 },
 {
 glyphname = hyphen;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "22BDAFBE-6308-4010-9D0C-693FDF26AFAA";
@@ -57173,7 +57195,6 @@ unicode = 002D;
 },
 {
 glyphname = hyphentwo;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "22BDAFBE-6308-4010-9D0C-693FDF26AFAA";
@@ -57300,7 +57321,6 @@ unicode = 2010;
 },
 {
 glyphname = "angkhankhu-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -57955,7 +57975,6 @@ unicode = 0E5A;
 },
 {
 glyphname = "fongman-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -58418,7 +58437,6 @@ unicode = 0E4F;
 },
 {
 glyphname = "khomut-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -59161,7 +59179,6 @@ unicode = 0E5B;
 },
 {
 glyphname = "maiyamok-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -59656,7 +59673,6 @@ unicode = 0E46;
 },
 {
 glyphname = "paiyannoi-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -60151,7 +60167,6 @@ unicode = 0E2F;
 },
 {
 glyphname = nbspace;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "8AE4ADC8-9A9B-483B-9DC3-8C129A33EC0D";
@@ -60191,7 +60206,6 @@ subCategory = Space;
 },
 {
 glyphname = uni200B;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "8AE4ADC8-9A9B-483B-9DC3-8C129A33EC0D";
@@ -60231,7 +60245,6 @@ subCategory = Space;
 },
 {
 glyphname = uni200C;
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 layerId = "8AE4ADC8-9A9B-483B-9DC3-8C129A33EC0D";
@@ -60359,7 +60372,6 @@ subCategory = Nonspace;
 },
 {
 glyphname = uni200D;
-lastChange = "2020-01-23 22:17:12 +0000";
 layers = (
 {
 layerId = "8AE4ADC8-9A9B-483B-9DC3-8C129A33EC0D";
@@ -60575,7 +60587,6 @@ subCategory = Nonspace;
 },
 {
 glyphname = baht;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "CAA0A3A7-F9A4-46B2-91A1-CB381E1B2EFA";
@@ -61174,7 +61185,6 @@ unicode = 0E3F;
 },
 {
 glyphname = uni02D7;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "8AE4ADC8-9A9B-483B-9DC3-8C129A33EC0D";
@@ -61302,7 +61312,6 @@ subCategory = Modifier;
 },
 {
 glyphname = tildecomb;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -61606,7 +61615,6 @@ subCategory = Nonspacing;
 },
 {
 glyphname = macronbelowcomb;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -61782,7 +61790,6 @@ subCategory = Nonspacing;
 },
 {
 glyphname = macronbelowcomb.alt;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -61957,7 +61964,6 @@ subCategory = Nonspacing;
 },
 {
 glyphname = uni02BC;
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 layerId = "8AE4ADC8-9A9B-483B-9DC3-8C129A33EC0D";
@@ -62181,7 +62187,6 @@ subCategory = Modifier;
 },
 {
 glyphname = "maiHanaKat-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -62724,7 +62729,6 @@ unicode = 0E31;
 },
 {
 glyphname = "maiHanaKat-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -63258,7 +63262,6 @@ width = 0;
 },
 {
 glyphname = "maiEk-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -63481,7 +63484,6 @@ unicode = 0E48;
 },
 {
 glyphname = "maiEk-thai.small";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -63703,7 +63705,6 @@ width = 0;
 },
 {
 glyphname = "maiEk-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -63925,7 +63926,6 @@ width = 0;
 },
 {
 glyphname = "maiTho-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -64500,7 +64500,6 @@ unicode = 0E49;
 },
 {
 glyphname = "maiTho-thai.small";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -65074,7 +65073,6 @@ width = 0;
 },
 {
 glyphname = "maiTho-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -65648,7 +65646,6 @@ width = 0;
 },
 {
 glyphname = "maiTri-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -66351,7 +66348,6 @@ unicode = 0E4A;
 },
 {
 glyphname = "maiTri-thai.small";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -67053,7 +67049,6 @@ width = 0;
 },
 {
 glyphname = "maiTri-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -67755,7 +67750,6 @@ width = 0;
 },
 {
 glyphname = "maiChattawa-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -68130,7 +68124,6 @@ unicode = 0E4B;
 },
 {
 glyphname = "maiChattawa-thai.small";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -68504,7 +68497,6 @@ width = 0;
 },
 {
 glyphname = "thanthakhat-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -68991,7 +68983,6 @@ unicode = 0E4C;
 },
 {
 glyphname = "thanthakhat-thai.small";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -69477,7 +69468,6 @@ width = 0;
 },
 {
 glyphname = "thanthakhat-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -69963,7 +69953,6 @@ width = 0;
 },
 {
 glyphname = "maitaikhu-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -70578,7 +70567,6 @@ unicode = 0E47;
 },
 {
 glyphname = "maitaikhu-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -71192,7 +71180,6 @@ width = 0;
 },
 {
 glyphname = "yamakkan-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -71671,7 +71658,6 @@ unicode = 0E4E;
 },
 {
 glyphname = "saraI-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -72014,7 +72000,6 @@ unicode = 0E34;
 },
 {
 glyphname = "saraI-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -72356,7 +72341,6 @@ width = 0;
 },
 {
 glyphname = "saraIi-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -72735,7 +72719,6 @@ unicode = 0E35;
 },
 {
 glyphname = "saraIi-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -73101,7 +73084,6 @@ width = 0;
 },
 {
 glyphname = "saraUe-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -73644,7 +73626,6 @@ unicode = 0E36;
 },
 {
 glyphname = "saraUe-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -74186,7 +74167,6 @@ width = 0;
 },
 {
 glyphname = "saraUee-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -74593,7 +74573,6 @@ unicode = 0E37;
 },
 {
 glyphname = "saraUee-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -74999,7 +74978,6 @@ width = 0;
 },
 {
 glyphname = "nikhahit-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -75406,7 +75384,6 @@ unicode = 0E4D;
 },
 {
 glyphname = "nikhahit_maiEk-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -75900,7 +75877,6 @@ width = 0;
 },
 {
 glyphname = "nikhahit_maiTho-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -76746,7 +76722,6 @@ width = 0;
 },
 {
 glyphname = "nikhahit_maiTri-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -77720,7 +77695,6 @@ width = 0;
 },
 {
 glyphname = "nikhahit_maiChattawa-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -78366,7 +78340,6 @@ width = 0;
 },
 {
 glyphname = "phinthu-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -78637,7 +78610,6 @@ unicode = 0E3A;
 },
 {
 glyphname = "phinthu-thai.small";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -78907,7 +78879,6 @@ width = 0;
 },
 {
 glyphname = "saraU-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -79346,7 +79317,6 @@ unicode = 0E38;
 },
 {
 glyphname = "saraU-thai.small";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -79784,7 +79754,6 @@ width = 0;
 },
 {
 glyphname = "saraUu-thai";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -80341,7 +80310,6 @@ unicode = 0E39;
 },
 {
 glyphname = "saraUu-thai.small";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -80891,7 +80859,6 @@ width = 0;
 },
 {
 glyphname = "maiChattawa-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -81265,7 +81232,6 @@ width = 0;
 },
 {
 glyphname = "nikhahit-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -81671,7 +81637,6 @@ width = 0;
 },
 {
 glyphname = "nikhahit_maiEk-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -82165,7 +82130,6 @@ width = 0;
 },
 {
 glyphname = "nikhahit_maiTho-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -83011,7 +82975,6 @@ width = 0;
 },
 {
 glyphname = "nikhahit_maiTri-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
@@ -83985,7 +83948,6 @@ width = 0;
 },
 {
 glyphname = "nikhahit_maiChattawa-thai.narrow";
-lastChange = "2016-11-15 17:20:48 +0000";
 layers = (
 {
 anchors = (
