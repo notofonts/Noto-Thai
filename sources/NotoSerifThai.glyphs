@@ -67,6 +67,10 @@ featurePrefixes = (
 automatic = 1;
 code = "languagesystem DFLT dflt;\012languagesystem thai dflt;\012";
 name = Languagesystems;
+},
+{
+code = "table STAT {\012    ElidedFallbackName { name \"Regular\"; };\012\012    DesignAxis wght 0 { name \"Weight\"; };\012    DesignAxis wdth 1 { name \"Width\"; };\012\012    AxisValue {\012        location wght 100;\012        name \"Thin\";\012    };\012    AxisValue {\012        location wght 200;\012        name \"ExtraLight\";\012    };\012    AxisValue {\012        location wght 300;\012        name \"Light\";\012    };\012    AxisValue {\012        location wght 400;\012        name \"Regular\";\012        flag ElidableAxisValueName;\012    };\012    AxisValue {\012        location wght 500;\012        name \"Medium\";\012    };\012    AxisValue {\012        location wght 600;\012        name \"SemiBold\";\012    };\012    AxisValue {\012        location wght 700;\012        name \"Bold\";\012    };\012    AxisValue {\012        location wght 800;\012        name \"ExtraBold\";\012    };\012    AxisValue {\012        location wght 900;\012        name \"Black\";\012    };\012\012    AxisValue {\012        location wdth 62.5;\012        name \"Condensed\";\012    };\012    AxisValue {\012        location wdth 75;\012        name \"Condensed\";\012    };\012    AxisValue {\012        location wdth 87.5;\012        name \"SemiCondensed\";\012    };\012    AxisValue {\012        location wdth 100;\012        name \"Normal\";\012        flag ElidableAxisValueName;\012    };\012} STAT;";
+name = STAT;
 }
 );
 features = (
