@@ -14,12 +14,11 @@ jobs:
     strategy:
       matrix:
         font-source:
-          - NotoSans-MM.glyphs
-          - NotoSans-ItalicMM.glyphs
-          - NotoSerif-MM.glyphs
-          - NotoSerif-ItalicMM.glyphs
-          - NotoSerifDisplay-ItalicMM.glyphs
-          - NotoSansMono-MM.glyphs
+          - NotoLoopedThai.glyphs
+          - NotoSansThai.glyphs
+          - NotoSerifThai.glyphs
+          - NotoLoopedThaiUI.glyphs
+          - NotoSansThaiUI.glyphs
     steps:
     - name: Cancel previous
       uses: styfle/cancel-workflow-action@0.8.0
@@ -50,12 +49,11 @@ jobs:
     strategy:
       matrix:
         font-family:
-          - NotoSans
-          - NotoSans-Italic
-          - NotoSerif
-          - NotoSerif-Italic
-          - NotoSerifDisplay-Italic
-          - NotoSansMono
+          - NotoSansThai
+          - NotoLoopedThai
+          - NotoSerifThai
+          - NotoSansThaiUI
+          - NotoLoopedThaiUI
     steps:
     - name: Pull main repository
       uses: actions/checkout@v2
@@ -93,12 +91,11 @@ jobs:
     strategy:
       matrix:
         font-family:
-          - NotoSans
-          - NotoSans-Italic
-          - NotoSerif
-          - NotoSerif-Italic
-          - NotoSerifDisplay-Italic
-          - NotoSansMono
+          - NotoSansThai
+          - NotoSerifThai
+          - NotoSansThaiUI
+          # - NotoLoopedThai
+          # - NotoLoopedThaiUI
         weight: [100, 400, 700, 900]
         width: [62.5, 100]
     steps:
