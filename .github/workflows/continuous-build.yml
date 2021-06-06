@@ -16,7 +16,7 @@ jobs:
         font-source:
           - NotoLoopedThai.glyphs
           - NotoSansThai.glyphs
-          - NotoSerifThai.glyphs
+          - NotoSerifThai-MM.glyphs
           - NotoLoopedThaiUI.glyphs
           - NotoSansThaiUI.glyphs
     steps:
