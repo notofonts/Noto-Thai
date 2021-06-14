@@ -36,7 +36,7 @@ jobs:
         pip install -r requirements.txt
     - name: Build ${{ matrix.font-source }}
       run: |
-        fontmake -g sources/${{ matrix.font-source}} -o variable
+        fontmake -g src/${{ matrix.font-source}} -o variable
     - name: Store fonts
       uses: actions/upload-artifact@v1
       with:
