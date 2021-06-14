@@ -1,0 +1,10 @@
+{
+	"tests": [
+		{
+			"note": "Check that manual and automatic abovemarks position well (see googlefonts/noto-source#377)",
+			"only": "NotoLoopedThai-VF.ttf",
+			"input": "กิ่",
+			"expectation": "uni0E01=0+601|uni0E34=0@-589,0+0|uni0E48.small=0@-222,-6+0"
+		}
+	]
+}
